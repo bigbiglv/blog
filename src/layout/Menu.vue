@@ -6,11 +6,10 @@ const routes = ref(router.options.routes)
 </script>
 
 <template>
-menu
 <ul>
   <li v-for="(item,index) in routes">
     {{item.name}}
-    <router-link v-for="(child,i) in item.children" :to="item.path+'/'+child.path">
+    <router-link v-for="(child,i) in item.children" :to="item.path === '/' ? '/' : item.path+'/'+child.path">
       {{child.name}}
     </router-link>
   </li>
