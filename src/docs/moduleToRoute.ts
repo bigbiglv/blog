@@ -1,5 +1,7 @@
 /*
 * 批量导入的模块转成路由表
+* @param {Array<Module>} modules 模块列表 
+* @return {Array<RouteRecordRaw>} 路由表
 */
 import { RouteRecordRaw } from "vue-router"
 import Layout from "../layout/index.vue"
