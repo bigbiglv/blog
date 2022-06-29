@@ -2,11 +2,13 @@
 </script>
 
 <template>
-  <router-view>
-    <template #default="{ Component, route }">
+  <div class="">
+    <router-view>
+      <template #default="{ Component, route }">
       <component :is="Component" :key="route.fullPath"/>
     </template>
-  </router-view>
+    </router-view>
+  </div>
 </template>
 
 
