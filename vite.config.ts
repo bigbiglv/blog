@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { join } from 'path'
 import Markdown from 'vite-plugin-vue-markdown'
 
 export default defineConfig({
@@ -13,5 +14,10 @@ export default defineConfig({
   ],
   server: {
     port: 3001,
+  },
+  resolve: {
+    alias: {
+      '@': join(__dirname, "src"),
+    }
   }
 })
