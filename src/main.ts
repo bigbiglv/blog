@@ -3,8 +3,12 @@ import App from './App.vue'
 import { createHead } from '@vueuse/head'
 import { router } from './router'
 import('./assets/css/index.css')
-const app = createApp(App)
+import { createPinia } from 'pinia';
+const store = createPinia()
 
+
+const app = createApp(App)
+app.use(store)
 app.use(router)
 app.use(createHead())
 app.mount('#app')
