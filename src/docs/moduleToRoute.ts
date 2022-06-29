@@ -18,9 +18,9 @@ export default function moduleToRoute(modules:Record<string, {[key: string]: any
       const childName = key.split('/')[3].slice(0,-3)  //截取到文件名
       const childPath = childName
       let index = routes.findIndex(route => route.name === name)
+      //父级路由存在
       if(routes.length > 0 && index > -1){
-        //检查父级路由是否存在
-        //如果存在则添加子路由
+        //添加子路由
         routes[index].children?.push({
           path: childPath,
           name: `${name}-${childName}`,
@@ -30,7 +30,7 @@ export default function moduleToRoute(modules:Record<string, {[key: string]: any
           }
         })
       }else{
-        //当前还没有任何路由
+        //当前还没有任何路由或者父级路由不存在
         //push一个路由做为父级路由并添加当前为子级路由
         routes.push({
           path: path,
