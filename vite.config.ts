@@ -19,8 +19,6 @@ export default defineConfig({
         md.use(require('markdown-it-highlightjs'))
         // add anchor links to your H[x] tags
         md.use(require('markdown-it-anchor'))
-        // add code syntax highlighting with Prism
-        // md.use(require('markdown-it-prism'))
         md.use(require('markdown-it-emoji'))
 
       },

@@ -13,7 +13,6 @@
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-highlightjs": "^4.0.1",
-    "markdown-it-prism": "^2.2.4",
     "pinia": "^2.0.14",
     "vue": "^3.2.25",
     "vue-router": "^4.0.16"
