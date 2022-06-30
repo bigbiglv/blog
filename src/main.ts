@@ -4,6 +4,7 @@ import { createHead } from '@vueuse/head'
 import { router } from './router'
 import('./assets/css/index.css')
 import { createPinia } from 'pinia';
+import 'highlight.js/styles/github.css';
 const store = createPinia()
 
 

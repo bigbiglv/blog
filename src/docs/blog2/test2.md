@@ -10,6 +10,8 @@ meta:
 #### 注意
 * 在setup()或script setup创建的侦听器是绑定在当前组件实例上的，会随着组件的卸载而销毁
 * **如果在异步回调中创建一个侦听器的话是不会随着组件的卸载而销毁的，需要手动停止**
+😁
+
 ```ts
 import { ref,watch } from 'vue'
 let test = ref(0)

@@ -9,7 +9,21 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/], 
     }),
     Markdown({
-      headEnabled: true 
+      headEnabled: true,
+      markdownItOptions: {
+        html: true,
+        linkify: true,
+        typographer: true,
+      },
+      markdownItSetup(md) {
+        md.use(require('markdown-it-highlightjs'))
+        // add anchor links to your H[x] tags
+        md.use(require('markdown-it-anchor'))
+        // add code syntax highlighting with Prism
+        // md.use(require('markdown-it-prism'))
+        md.use(require('markdown-it-emoji'))
+
+      },
     })
   ],
   server: {
