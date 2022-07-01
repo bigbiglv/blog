@@ -25,7 +25,7 @@ export default defineStore({
         'felipec',
         'github',
         'gitgub-dark',
-        'gitgub-dark-dimmed',
+        'github-dark-dimmed',
         'hybrid',
         'vs2015',
         'xcode',
