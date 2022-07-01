@@ -4,8 +4,6 @@ import { createHead } from '@vueuse/head'
 import { router } from './router'
 import('./assets/css/index.css')
 import { createPinia } from 'pinia';
-// import(`./assets/highlinght/${path}.css`);
-// console.log('css',css.default)
 
 const store = createPinia()
 

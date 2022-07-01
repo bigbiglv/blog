@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import codeThemeStore from '@/store/codeThemeStore';
-const storeCodeTheme = codeThemeStore()
+import themeStore from '@/store/themeStore';
+const storeTheme = themeStore()
 
 </script>
 
 <template>
-<h1 @click="storeCodeTheme.cheangeTheme()">
+<h1 @click="storeTheme.cheangeCodeTheme()">
   我是home
 </h1>
-<p @click="storeCodeTheme.cheangeTheme('vs2015')">切换</p>
+<p @click="storeTheme.cheangeCodeTheme('vs2015')">切换</p>
 </template>
 
 
