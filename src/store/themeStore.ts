@@ -14,6 +14,22 @@ export default defineStore({
         'light',
       ] as Themelist,
       isDark:false,  //是否是暗色主题
+      //代码块
+      codeThemeList:[
+        'a11y-dark',
+        'a11y-light',
+        'agate',
+        'atom-one-dark-reasonable',
+        'atom-one-dark',
+        'default',
+        'felipec',
+        'github',
+        'gitgub-dark',
+        'gitgub-dark-dimmed',
+        'hybrid',
+        'vs2015',
+        'xcode',
+      ]
     }
   },
   getters:{
