@@ -10,7 +10,8 @@ const routes = ref(router.options.routes)
   <ul v-for="(item,index) in routes">
     {{item.name}}
     <li class="flex flex-col">
-      <router-link v-for="(child,i) in item.children" :to="item.path === '/' ? '/' : item.path+'/'+child.path">
+      <router-link v-for="(child,i) in item.children" :to="item.path === '/' ? child.path : item.path+'/'+child.path">
+        <!-- {{!child.meta?.hidden ? child.name : ''}} -->
         {{child.name}}
       </router-link>
     </li>

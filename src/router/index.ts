@@ -15,6 +15,15 @@ export const routes:Array<RouteRecordRaw> = [
         meta: {
           title: '首页'
         }
+      },
+      {
+        path: '/setting',
+        name: 'setting',
+        component: () => import('@/view/Setting.vue'),
+        meta: {
+          title: '设置',
+          hidden: true
+        }
       }
     ]
   },
