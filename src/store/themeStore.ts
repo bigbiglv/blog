@@ -14,7 +14,7 @@ export default defineStore({
         'light',
       ] as Themelist,
       isDark:false,  //是否是暗色主题
-      //代码块
+      //代码块主题
       codeThemeList:[
         'a11y-dark',
         'a11y-light',
@@ -24,7 +24,7 @@ export default defineStore({
         'default',
         'felipec',
         'github',
-        'gitgub-dark',
+        'github-dark',
         'github-dark-dimmed',
         'hybrid',
         'vs2015',
@@ -46,9 +46,12 @@ export default defineStore({
       }
       this.isDark = !this.isDark
     },
-    //代码块主题切换
+    /*
+    * 代码块主题切换
+    * 通过link标签的disabled属性来切换
+    */
     cheangeCodeTheme(theme:string = 'github'){
-      let href = `./src/assets/highlinght/${theme}.css`
+      let href = `/highlinght/${theme}.css`
       let head = document.head || document.getElementsByTagName('head')[0];
       //获取head下所有link标签
       let links = head.getElementsByTagName('link');
