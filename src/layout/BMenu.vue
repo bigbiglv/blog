@@ -6,7 +6,7 @@ const routes = ref(router.options.routes)
 </script>
 
 <template>
-<div class="">
+<div class="w-44">
   <ul v-for="(item,index) in routes">
     {{item.name}}
     <li class="flex flex-col">

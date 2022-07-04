@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="">
+  <div class="py-5">
     <router-view>
       <template #default="{ Component, route }">
       <component :is="Component" :key="route.fullPath"/>

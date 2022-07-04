@@ -11,8 +11,8 @@ console.log(route.meta.title);
 </script>
 
 <template>
-  <div>
-    {{title}}
+  <div class="h-20 w-full flex justify-between items-center ">
+    <h2>{{title}}</h2> 
     <SelectCodeThemeVue />
   </div>
 </template>
