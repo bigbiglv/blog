@@ -1,24 +1,19 @@
 <script setup lang="ts">
-import themeStore from '@/store/themeStore'
-import { storeToRefs } from 'pinia';
-import { ref } from 'vue';
-const storeTheme = themeStore()
-const { codeThemeList } = storeToRefs(storeTheme)
-const select = ref<HTMLSelectElement>()
-function test(){
-  let value = select.value?.value
-  storeTheme.cheangeCodeTheme(value)
-}
+import SelectCodeThemeVue from '@/components/selectCodeTheme.vue';
+import { useRoute } from 'vue-router';
+import { watch, ref } from 'vue';
+const route = useRoute();
+const title = ref(route.meta.title);
+watch(()=>route.meta.title,(val)=>{
+  title.value = val;
+});
+console.log(route.meta.title);
 </script>
 
 <template>
   <div>
-    header
-    <select ref="select" @change="test()">
-      <option :value="item" v-for="(item,index) in codeThemeList">
-        {{item}}
-      </option>
-    </select>
+    {{title}}
+    <SelectCodeThemeVue />
   </div>
 </template>
 
