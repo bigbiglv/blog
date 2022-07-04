@@ -5,9 +5,9 @@ import BHeader from './BHeader.vue'
 </script>
 
 <template>
-  <div class="w-screen h-screen overflow-hidden fixed top-0 left-0 flex bg-white dark:bg-gray-800 transition">
+  <div class="w-full h-full overflow-hidden flex  bg-white dark:bg-gray-800 transition">
     <BMenu />
-    <div class="overflow-y-auto flex-1">
+    <div class="overflow-y-auto flex-1 box-border ">
       <BHeader />
       <BMain />
     </div>
