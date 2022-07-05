@@ -4,13 +4,12 @@ import { createHead } from '@vueuse/head'
 import { router } from './router'
 import('./assets/css/tailwind.css')
 import('./assets/css/common.css')
-import { createPinia } from 'pinia';
-
-const store = createPinia()
-
+import setupStore from '@/store'
 
 const app = createApp(App)
-app.use(store)
+
+//注册pinia
+setupStore(app)
 app.use(router)
 app.use(createHead())
 app.mount('#app')
