@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createHead } from '@vueuse/head'
 import { router } from './router'
-import('./assets/css/index.css')
+import('./assets/css/tailwind.css')
+import('./assets/css/common.css')
 import { createPinia } from 'pinia';
 
 const store = createPinia()

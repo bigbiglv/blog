@@ -2,7 +2,4 @@
  */
 @tailwind components;
 @tailwind utilities;
-/* 代码块过渡 */
-pre code.hljs{
-  transition: .25s;
-}
+

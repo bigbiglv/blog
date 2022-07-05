@@ -1,0 +1,8 @@
+body{
+  margin: 0;
+}
+/* 代码块 */
+pre code{
+  border-radius: 5px;
+  transition: .25s;
+}
