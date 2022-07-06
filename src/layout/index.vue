@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import BMain from './BMain.vue'
-import BMenu from './BMenu.vue'
+import BMenu from './BMenu/index.vue'
 import BHeader from './BHeader.vue'
 
 </script>
