@@ -16,7 +16,7 @@ export default function moduleToRoute(modules:Record<string, {[key: string]: any
       const path = `/${encodeURI(name)}` //需要转译不然刷新会获取不到路由
       //子级路由信息
       const childName = key.split('/')[3].slice(0,-3)  //截取到文件名
-      const childPath = encodeURI(childName)
+      const childPath = path+'/'+encodeURI(childName)
       let index = routes.findIndex(route => route.name === name)
       //父级路由存在
       if(routes.length > 0 && index > -1){
