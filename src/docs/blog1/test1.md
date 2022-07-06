@@ -7,3 +7,4 @@ meta:
 ---
 {{frontmatter.name}}
 # blog1-test1
+[跳转](#/中文名字/笔记1)
