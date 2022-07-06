@@ -4,10 +4,12 @@ import GoTop from '@/components/GoTop.vue'
 </script>
 
 <template>
-  <div class="py-5 overflow-y-auto" id="appMain">
+  <div class="py-5 overflow-y-auto overflow-x-hidden" id="appMain">
     <router-view>
       <template #default="{ Component, route }">
-        <component :is="Component" :key="route.fullPath"/>
+        <transition name="fade-slide" mode="out-in" appear>
+          <component :is="Component" :key="route.fullPath"/>
+        </transition>
       </template>
     </router-view>
     <GoTop />
@@ -17,4 +19,18 @@ import GoTop from '@/components/GoTop.vue'
 
 
 <style scoped>
+.fade-slide-leave-active,
+.fade-slide-enter-active {
+  transition: all 0.3s;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
 </style>
