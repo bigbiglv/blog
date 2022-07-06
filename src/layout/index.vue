@@ -8,7 +8,7 @@ import BHeader from './BHeader.vue'
 <template>
   <div class="w-full h-full overflow-hidden flex  bg-white dark:bg-gray-800 transition">
     <BMenu />
-    <div class="overflow-y-auto h-screen flex-1 box-border flex flex-col">
+    <div class="px-5 overflow-y-auto h-screen flex-1 box-border flex flex-col">
       <BHeader />
       <BMain />
     </div>

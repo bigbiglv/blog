@@ -22,7 +22,14 @@ function goTop(){
 </script>
 
 <template>
-  <div class="w-20 h-10 align-middle text-center fixed bottom-10 right-10 rounded-sm border-2 border-black" @click="goTop" v-if="isShow">
+  <div 
+    class="w-20 h-10 align-middle text-center 
+          shadow-xl fixed bottom-10 right-10 rounded-sm 
+          border-2 border-black cursor-pointer hover:animate-pulse
+          bg-white dark:bg-gray-800" 
+    @click="goTop" 
+    v-if="isShow"
+  >
     TOP
   </div>
 </template>
