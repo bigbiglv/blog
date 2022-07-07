@@ -6,16 +6,18 @@ import BHeader from './BHeader.vue'
 </script>
 
 <template>
-  <div class="w-full h-full overflow-hidden flex  bg-white dark:bg-gray-800 transition">
-    <BMenu />
-    <div class="px-5 overflow-y-auto h-screen flex-1 box-border flex flex-col">
-      <BHeader />
+  <div class="layout h-screen overflow-hidden flex flex-col bg-white dark:bg-gray-800 transition">
+    <BHeader />
+    <div class="layout-main w-full h-full overflow-y-auto box-border flex">
+      <BMenu />
       <BMain />
     </div>
   </div>
 </template>
 
-
 <style scoped>
-
+.layout{
+  width: 1000px;
+  margin: 0 auto;
+}
 </style>
