@@ -18,13 +18,23 @@ export default defineConfig({
       markdownItSetup(md) {
         md.use(require('markdown-it-highlightjs'))
         // add anchor links to your H[x] tags
-        md.use(require('markdown-it-anchor'))
+        const anchor = require('markdown-it-anchor')
+        md.use(anchor,{
+          permalink: anchor.permalink.linkInsideHeader({
+            symbol: `
+              <span aria-hidden="true">#</span>
+            `,
+            placement: 'before'
+          })
+        })
         md.use(require('markdown-it-emoji'))
+        // md.use(require('markdown-it-github-headings'),{linkIcon:'#'})
 
       },
     })
   ],
-  base: '/test-blog/',
+  // base: '/test-blog/',
+  base: '/',
   server: {
     port: 3001,
   },
