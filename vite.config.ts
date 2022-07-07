@@ -24,7 +24,7 @@ export default defineConfig({
       },
     })
   ],
-  base: '/',
+  base: '/test-blog/',
   server: {
     port: 3001,
   },
