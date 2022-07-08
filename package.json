@@ -8,6 +8,7 @@
     "preview": "npm run build && vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^8.9.0",
     "@vueuse/head": "^0.7.6",
     "highlight.js": "^11.5.1",
     "markdown-it-anchor": "^8.6.4",
