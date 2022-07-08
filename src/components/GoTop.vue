@@ -28,6 +28,7 @@ function goTop(){
           border-2 border-black cursor-pointer hover:animate-pulse
           bg-white dark:bg-gray-800" 
     @click="goTop" 
+    title="蒸蒸日上"
     v-if="isShow"
   >
     TOP

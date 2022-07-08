@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // import MItem from './MItem.vue'
 import { RouteRecordRaw } from "vue-router"
-import { toRef, ref, computed } from 'vue'
+import { toRef, ref } from 'vue'
 const props = defineProps({
   routes: {
     type: Array<RouteRecordRaw>,
@@ -11,25 +11,38 @@ const props = defineProps({
 const routes = toRef(props,'routes')
 const path = ref('')  //当前选中的笔记本
 
-const children = computed(()=>{
-  return path.value ? routes.value.filter(item=>item.path === path.value)[0].children : []
-})
+const children = ref<RouteRecordRaw[]>([])
+const page = ref(0)
+function select(item:RouteRecordRaw){
+  path.value = item.path
+  if(item.children?.length){
+    children.value = item.children
+    page.value = 1
+  }
+}
 
+function back(){
+  path.value = ''
+  children.value = []
+  page.value = 0
+}
 </script>
 
 <template>
-  <div class="">
-
-    <ul>
-      <li v-for="(item,index) in routes">
-        <span @click="path=item.path" v-if="children">{{item.name}}</span>
-      </li>
-    </ul>
-    <ul>
-      <li v-for="item in children">
-        <router-link :to="item.path">{{item.meta?.title}}</router-link>
-      </li>
-    </ul>
+  <div class="w-full h-full overflow-hidden">
+    <span @click="back" v-if="page === 1">返回</span>
+    <div class="w-full h-full relative overflow-y-auto">
+      <ul class="w-full list-none p-0 absolute top-0 transition-all" :class="[page === 0 ? 'left-0' : '-left-full']">
+        <li v-for="(item,index) in routes">
+          <span @click="select(item)" v-if="children">{{item.name}}</span>
+        </li>
+      </ul>
+      <ul class="w-full list-none p-0 absolute top-0 transition-all" :class="[page === 1 ? 'left-0' : 'left-full']">
+        <li v-for="item in children">
+          <router-link :to="item.path">{{item.meta?.title}}</router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 
 </template>
