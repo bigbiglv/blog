@@ -1,23 +1,13 @@
 <script setup lang="ts">
-import { onMounted, watch, ref, computed } from 'vue'
-const scrollTop = ref(0)
-onMounted(()=>{
-  const appMain = document.querySelector('#appMain')
-  appMain?.addEventListener('scroll',(el)=>{
-   scrollTop.value = (el.target as HTMLElement)?.scrollTop;
-  })
+const porps = defineProps({
+  isShow:{
+    type: Boolean,
+    default: false
+  }
 })
-const isShow = computed(()=>{
-  return scrollTop.value > 50
-})
+const emits = defineEmits(['go'])
 function goTop(){
-  //带动画的返回顶部
-  const appMain = document.querySelector('#appMain')
-  console.log(appMain?.scrollTop)
-  appMain?.scrollTo({
-    behavior: 'smooth',
-    top: 0
-  })
+  emits('go')
 }
 </script>
 
@@ -29,7 +19,7 @@ function goTop(){
           bg-white dark:bg-gray-800" 
     @click="goTop" 
     title="蒸蒸日上"
-    v-if="isShow"
+    v-if="porps.isShow"
   >
     TOP
   </div>
