@@ -29,15 +29,15 @@ function back(){
 
 <template>
   <div class="w-full h-full overflow-hidden">
-    <span @click="back" v-if="page === 1">返回</span>
+    <button @click="back" v-if="page === 1">返回</button>
     <div class="w-full h-full relative overflow-y-auto">
       <ul class="w-full list-none p-0 absolute top-0 transition-all" :class="[page === 0 ? 'left-0' : '-left-full']">
-        <li v-for="(item,index) in routes">
+        <li class="cursor-pointer" v-for="(item,index) in routes" :key="index">
           <span @click="select(item)" v-if="children">{{item.name}}</span>
         </li>
       </ul>
       <ul class="w-full list-none p-0 absolute top-0 transition-all" :class="[page === 1 ? 'left-0' : 'left-full']">
-        <li v-for="item in children">
+        <li class="cursor-pointer" v-for="(item,index) in children" :key="index">
           <router-link :to="item.path">{{item.meta?.title}}</router-link>
         </li>
       </ul>

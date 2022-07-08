@@ -15,7 +15,7 @@ watch(()=>route.meta.title,(val)=>{
 </script>
 
 <template>
-<div class="bg-gray-50" :class="[props.isFixed ? 'sticky top-0 left-0':'']">
-  <h2>{{title}}</h2> 
+<div class="bg-gray-50 w-full h-20 transition " :class="[props.isFixed ? 'sticky top-0 left-0':'']">
+  <h2 class="m-0">{{title}}</h2> 
 </div>
 </template>

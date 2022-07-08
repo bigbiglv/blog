@@ -23,10 +23,11 @@ const isShowNavBar = computed(()=>{
     return false
   }
 })
+const key = ref(0)
 </script>
 
 <template>
-  <div class="py-5 flex-1 overflow-y-auto overflow-x-hidden relative" ref="appMain">
+  <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative" ref="appMain">
     <MNavBar :isFixed="isShowNavBar"/>
     <router-view>
       <template #default="{ Component, route }">
