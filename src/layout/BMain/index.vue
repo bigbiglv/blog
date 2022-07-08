@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import GoTop from '@/components/GoTop.vue'
-
+import MNavBar from './MNavBar.vue'
 </script>
 
 <template>
   <div class="py-5 flex-1 overflow-y-auto overflow-x-hidden" id="appMain">
+    <MNavBar />
     <router-view>
       <template #default="{ Component, route }">
         <transition name="fade-slide" mode="out-in" appear>

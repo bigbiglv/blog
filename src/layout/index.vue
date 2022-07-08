@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BMain from './BMain.vue'
+import BMain from './BMain/index.vue'
 import BMenu from './BMenu/index.vue'
 import BHeader from './BHeader.vue'
 
