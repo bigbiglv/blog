@@ -1,3 +1,16 @@
+.a11y-dark{
+  --hljs-bg: #2b2b2b;
+  --hljs-color: #f8f8f2;
+
+  --hljs-comment-color: #d4d0ab;
+  --hljs-deletion-color: #ffa07a;
+  --hljs-built_in-color: #f5ab35;
+  --hljs-attribute-color: gold;
+  --hljs-addition-color: #abe338;
+  --hljs-section-color: #00e0e0;
+  --hljs-keyword-color: #dcc6e0;
+}
+
 pre code.hljs{
   display:block;overflow-x:auto;padding:1em
 }
@@ -5,31 +18,35 @@ code.hljs{
   padding:3px 5px
 }
 /*!
-  Theme: a11y-light
+  Theme: a11y-dark
   Author: @ericwbailey
   Maintainer: @ericwbailey
 
   Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css
 */.hljs{
-  background:#f3f3f3;color:#545454
+  background:#2b2b2b;
+  color:#f8f8f2;
 }
 .hljs-comment,.hljs-quote{
-  color:#696969
+  color:#d4d0ab
 }
 .hljs-deletion,.hljs-name,.hljs-regexp,.hljs-selector-class,.hljs-selector-id,.hljs-tag,.hljs-template-variable,.hljs-variable{
-  color:#d91e18
+  color:#ffa07a
 }
-.hljs-attribute,.hljs-built_in,.hljs-link,.hljs-literal,.hljs-meta,.hljs-number,.hljs-params,.hljs-type{
-  color:#aa5d00
+.hljs-built_in,.hljs-link,.hljs-literal,.hljs-meta,.hljs-number,.hljs-params,.hljs-type{
+  color:#f5ab35
+}
+.hljs-attribute{
+  color:gold
 }
 .hljs-addition,.hljs-bullet,.hljs-string,.hljs-symbol{
-  color:green
+  color:#abe338
 }
 .hljs-section,.hljs-title{
-  color:#007faa
+  color:#00e0e0
 }
 .hljs-keyword,.hljs-selector-tag{
-  color:#7928a1
+  color:#dcc6e0
 }
 .hljs-emphasis{
   font-style:italic
