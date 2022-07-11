@@ -37,9 +37,13 @@ export default defineStore({
     setCodeTheme(theme:string){
       const app = document.getElementById('app') 
       //移除app元素的所有class
-      const classList = app?.classList
+      const classList:string[] = []
+      app?.classList?.forEach(className => {
+        classList.push(className)
+      })
       app?.classList.remove(...classList)
       app?.classList.add(theme)
+      localStorage.setItem('codeTheme', theme)
     },
     //暗色主题
     changeDarkTheme(){      
