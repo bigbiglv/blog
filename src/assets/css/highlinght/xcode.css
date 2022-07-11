@@ -1,0 +1,79 @@
+.xcode{
+  --hljs-bg:#f3f3f3;
+  --hljs-color:#000;
+  --hljs-xml-color:silver;
+  --hljs-comment-color:#007400;
+  --hljs-attribute-color:#aa0d91;
+  --hljs-template-variable-color:#3f6e74;
+  --hljs-code-color:#c41a16;
+  --hljs-link-color:#0e0eff;
+  --hljs-bullet-color:#1c00cf;
+  --hljs-meta-color:#643820;
+  --hljs-built-in-color:#5c2699;
+  --hljs-attr-color:#836c28;
+  --hljs-subst-color:#000;
+  --hljs-formula-bg:#eee;
+  --hljs-addition-bg:#baeeba;
+  --hljs-deletion-bg:#ffc8bd;
+  --hljs-selector-class-color:#9b703f;
+}
+pre code.hljs{
+  display:block;overflow-x:auto;padding:1em
+}
+code.hljs{
+  padding:3px 5px
+}
+.hljs{
+  background:var(--hljs-bg);color:var(--hljs-color)
+}
+.xml .hljs-meta{
+  color:var(--hljs-xml-color)
+}
+.hljs-comment,.hljs-quote{
+  color:var(--hljs-comment-color)
+}
+.hljs-attribute,.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-tag{
+  color:var(--hljs-attribute-color)
+}
+.hljs-template-variable,.hljs-variable{
+  color:var(--hljs-template-variable-color)
+}
+.hljs-code,.hljs-meta .hljs-string,.hljs-string{
+  color:var(--hljs-code-color)
+}
+.hljs-link,.hljs-regexp{
+  color:var(--hljs-link-color)
+}
+.hljs-bullet,.hljs-number,.hljs-symbol,.hljs-title{
+  color:var(--hljs-bullet-color)
+}
+.hljs-meta,.hljs-section{
+  color:var(--hljs-meta-color)
+}
+.hljs-built_in,.hljs-class .hljs-title,.hljs-params,.hljs-title.class_,.hljs-type{
+  color:var(--hljs-built-in-color)
+}
+.hljs-attr{
+  color:var(--hljs-attr-color)
+}
+.hljs-subst{
+  color:var(--hljs-subst-color)
+}
+.hljs-formula{
+  background-color:var(--hljs-formula-bg);font-style:italic
+}
+.hljs-addition{
+  background-color:var(--hljs-addition-bg)
+}
+.hljs-deletion{
+  background-color:var(--hljs-deletion-bg)
+}
+.hljs-selector-class,.hljs-selector-id{
+  color:var(--hljs-selector-class-color)
+}
+.hljs-doctag,.hljs-strong{
+  font-weight:700
+}
+.hljs-emphasis{
+  font-style:italic
+}

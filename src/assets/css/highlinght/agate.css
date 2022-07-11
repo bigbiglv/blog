@@ -1,0 +1,121 @@
+.agate{
+   --hljs-bg: #333;
+   --hljs-color: #fff;
+
+   --hljs-section-color: #62c8f3;
+   --hljs-selector-color: #ade5fc;
+   --hljs-meta-string-color: #a2fca2;
+   --hljs-attr-color: #7bd694;
+   --hljs-tag-color: inherit;
+   --hljs-attribute-color: #ffa;
+   --hljs-number-color: #d36363;
+   --hljs-bullet-color: #b8d8a2;
+   --hljs-builtin-color: #fcc28c;
+   --hljs-code-color: #888;
+   --hljs-link-color: #c6b4f0;
+   --hljs-meta-color: #fc9b9b;
+   --hljs-deletion-color: #333;
+   --hljs-deletion-bg: #fc9b9b;
+   --hljs-addition-color: #333;
+   --hljs-addition-bg: #a2fca2;
+   --hljs-subst-color: #fff;
+   --hljs-a-color: inherit;
+   --hljs-a-focus-color: inherit;
+   --hljs-mark-color: inherit;
+   --hljs-mark-bg: #555;
+}
+
+pre code.hljs{
+   display:block;overflow-x:auto;padding:1em
+}
+code.hljs{
+   padding:3px 5px
+}
+/*!
+   Theme: Agate
+   Author: (c) Taufik Nurrohman <hi@taufik-nurrohman.com>
+   Maintainer: @taufik-nurrohman
+   Updated: 2021-04-24
+
+   #333
+   #62c8f3
+   #7bd694
+   #888
+   #a2fca2
+   #ade5fc
+   #b8d8a2
+   #c6b4f0
+   #d36363
+   #fc9b9b
+   #fcc28c
+   #ffa
+   #fff
+*/
+.hljs{
+   background:var(--hljs-bg);
+   color:var(--hljs-color)
+}
+.hljs-doctag,.hljs-meta-keyword,.hljs-name,.hljs-strong{
+   font-weight:700
+}
+.hljs-code,.hljs-emphasis{
+   font-style:italic
+}
+.hljs-section,.hljs-tag{
+   color:var(--hljs-section-color)
+}
+.hljs-selector-class,.hljs-selector-id,.hljs-template-variable,.hljs-variable{
+   color:var(--hljs-selector-color)
+}
+.hljs-meta-string,.hljs-string{
+   color:var(--hljs-meta-string-color)
+}
+.hljs-attr,.hljs-quote,.hljs-selector-attr{
+   color:var(--hljs-attr-color)
+}
+.hljs-tag .hljs-attr{
+   color:var(--hljs-tag-color)
+}
+.hljs-attribute,.hljs-title,.hljs-type{
+   color:var(--hljs-attribute-color)
+}
+.hljs-number,.hljs-symbol{
+   color:var(--hljs-number-color)
+}
+.hljs-bullet,.hljs-template-tag{
+   color:var(--hljs-bullet-color)
+}
+.hljs-built_in,.hljs-keyword,.hljs-literal,.hljs-selector-tag{
+   color:var(--hljs-builtin-color)
+}
+.hljs-code,.hljs-comment,.hljs-formula{
+   color:var(--hljs-code-color)
+}
+.hljs-link,.hljs-regexp,.hljs-selector-pseudo{
+   color:var(--hljs-link-color)
+}
+.hljs-meta{
+   color:var(--hljs-meta-color)
+}
+.hljs-deletion{
+   background:var(--hljs-deletion-bg);
+   color:var(--hljs-deletion-color)
+}
+.hljs-addition{
+   background:var(--hljs-addition-bg);
+   color:var(--hljs-addition-color)
+}
+.hljs-subst{
+   color:var(--hljs-subst-color)
+}
+.hljs a{
+   color:var(--hljs-a-color)
+}
+.hljs a:focus,.hljs a:hover{
+   color:var(--hljs-a-focus-color);
+   text-decoration:underline
+}
+.hljs mark{
+   background:var(--hljs-mark-bg);
+   color:var(--hljs-mark-color)
+}

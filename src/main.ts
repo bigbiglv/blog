@@ -6,6 +6,7 @@ import('./assets/css/tailwind.css')
 import('./assets/css/common.css')
 import('./assets/css/highlinght/a11y-light.css')
 import('./assets/css/highlinght/a11y-dark.css')
+import('./assets/css/highlinght/agate.css')
 // import('../public/highlinght/github.css')
 import setupStore from '@/store'
 
