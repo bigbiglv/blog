@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouteRecordRaw } from "vue-router"
+import { RouteRecordRaw, useRoute } from "vue-router"
 import { toRef, ref } from 'vue'
 const props = defineProps({
   routes: {
@@ -7,6 +7,8 @@ const props = defineProps({
     required: true
   },
 })
+const route = useRoute()
+const routePath = route.path
 const routes = toRef(props,'routes')
 const path = ref('')  //当前选中的笔记本
 
@@ -19,7 +21,17 @@ function select(item:RouteRecordRaw){
     page.value = 1
   }
 }
-
+//当前页面是不是笔记本列表页面 二级页面
+if(routePath.split('/').length > 2){
+  for(let i = 0; i < routes.value.length; i++){
+    console.log(routes.value[i].path, '/'+routePath.split('/')[1])
+    if(routes.value[i].path === '/' + routePath.split('/')[1]){
+      select(routes.value[i])
+      break
+    }
+  }
+  page.value = 1
+}
 function back(){
   path.value = ''
   children.value = []
