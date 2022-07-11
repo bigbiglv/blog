@@ -6,6 +6,7 @@ import BHeader from './BHeader.vue'
 </script>
 
 <template>
+<div class="flex justify-center">
   <div class="layout h-screen overflow-hidden flex flex-col bg-white dark:bg-gray-800 transition">
     <BHeader />
     <div class="layout-main w-full h-full overflow-y-auto box-border flex">
@@ -13,11 +14,11 @@ import BHeader from './BHeader.vue'
       <BMain />
     </div>
   </div>
+</div>
 </template>
 
 <style scoped>
 .layout{
   width: 1000px;
-  margin: 0 auto;
 }
 </style>

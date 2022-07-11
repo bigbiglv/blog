@@ -15,7 +15,7 @@ export default defineStore({
       ] as Themelist,
       isDark:false,  //是否是暗色主题
       //代码块主题
-      defaultCodeTheme: localStorage.getItem('codeTheme') || 'github-dark',   //默认代码块主题
+      defaultCodeTheme: localStorage.getItem('codeTheme') || 'github-dark',   //代码块主题默认为github-dark
       codeThemeList:[] as string[],
     }
   },
