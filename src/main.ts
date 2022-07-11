@@ -3,7 +3,7 @@ import App from './App.vue'
 import { createHead } from '@vueuse/head'
 import { router } from './router'
 import('./assets/css/tailwind.css')
-import('./assets/css/common.css')
+// import('./assets/css/common.css')
 import setupStore from '@/store'
 
 const app = createApp(App)
