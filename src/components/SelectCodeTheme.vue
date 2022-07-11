@@ -6,8 +6,8 @@ const storeTheme = themeStore()
 const { codeThemeList } = storeToRefs(storeTheme)
 const select = ref<HTMLSelectElement>()
 function changeCodeTheme(){
-  let value = select.value?.value
-  storeTheme.cheangeCodeTheme(value)
+  let value = select.value?.value as string
+  storeTheme.setCodeTheme(value)
 }
 </script>
 
