@@ -5,4 +5,7 @@ body{
 pre code{
   border-radius: 5px;
   transition: .25s;
+  font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+  font-size: 14px;
+  line-height: 1.4;
 }
