@@ -2,7 +2,7 @@
 import { useRoute } from 'vue-router';
 import { watch, ref } from 'vue';
 const props = defineProps({
-  isFixed:{
+  shrink:{
     type: Boolean,
     default: false
   }
@@ -15,7 +15,13 @@ watch(()=>route.meta.title,(val)=>{
 </script>
 
 <template>
-<div class="bg-gray-50 w-full h-20 transition " :class="[props.isFixed ? 'sticky top-0 left-0':'']">
-  <h2 class="m-0">{{title}}</h2> 
+<div 
+  class="bg-theme-default w-full 
+         transition-200 transition-all sticky top-0 flex items-center" 
+  :class="[props.shrink ? 'h-5':'h-10']"
+>
+  <h2 class="m-0 transition-200 transition-all" :class="[props.shrink ? 'text-sm':'text-xl']">
+    {{title}}
+  </h2> 
 </div>
 </template>
