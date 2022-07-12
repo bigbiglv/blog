@@ -2,6 +2,7 @@
   --hljs-bg: #f3f3f3;
   --hljs-color: #545454;
 
+  --hljs-selection-bg:#68686850;
   --hljs-comment-color: #696969;
   --hljs-deletion-color: #d91e18;
   --hljs-built_in-color: #aa5d00;
@@ -22,6 +23,10 @@ code.hljs{
 .hljs{
   background: var(--hljs-bg);
   color: var(--hljs-color);
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .hljs-comment,.hljs-quote{
   color: var(--hljs-comment-color);

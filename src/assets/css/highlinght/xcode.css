@@ -1,6 +1,7 @@
 .xcode{
   --hljs-bg:#f3f3f3;
   --hljs-color:#000;
+  --hljs-selection-bg:#68686850;
   --hljs-xml-color:silver;
   --hljs-comment-color:#007400;
   --hljs-attribute-color:#aa0d91;
@@ -25,6 +26,10 @@ code.hljs{
 }
 .hljs{
   background:var(--hljs-bg);color:var(--hljs-color)
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .xml .hljs-meta{
   color:var(--hljs-xml-color)

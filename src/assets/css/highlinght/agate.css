@@ -2,6 +2,7 @@
    --hljs-bg: #333;
    --hljs-color: #fff;
 
+  --hljs-selection-bg:#68686850;
    --hljs-section-color: #62c8f3;
    --hljs-selector-color: #ade5fc;
    --hljs-meta-string-color: #a2fca2;
@@ -55,6 +56,10 @@ code.hljs{
    background:var(--hljs-bg);
    color:var(--hljs-color)
 }
+.hljs ::selection,.hljs::selection{
+   /* color:var(--hljs-selection-color); */
+   background:var(--hljs-selection-bg)
+ }
 .hljs-doctag,.hljs-meta-keyword,.hljs-name,.hljs-strong{
    font-weight:700
 }

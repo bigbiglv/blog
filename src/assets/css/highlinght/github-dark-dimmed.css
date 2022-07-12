@@ -1,6 +1,7 @@
 .github-dark-dimmed{
   --hljs-bg: #22272e;
   --hljs-color: #adbac7;
+  --hljs-selection-bg:#68686850;
   --hljs-doctag-color: #f47067;
   --hljs-title-color: #dcbdfb;
   --hljs-attr-color: #6cb6ff;
@@ -35,6 +36,10 @@ code.hljs{
 */.hljs{
   color:var(--hljs-color);
   background:var(--hljs-bg)
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{
   color:var(--hljs-doctag-color)

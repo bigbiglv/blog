@@ -1,6 +1,7 @@
 .atom-one-light{
   --hljs-bg: #fafafa;
   --hljs-color: #383a42;
+  --hljs-selection-bg:#68686850;
   --hljs-comment-color: #a0a1a7;
   --hljs-doctag-color: #a626a4;
   --hljs-deletion-color: #e45649;
@@ -21,6 +22,10 @@ code.hljs{
 .hljs{
   color:var(--hljs-color);
   background:var(--hljs-bg)
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .hljs-comment,.hljs-quote{
   color:var(--hljs-comment-color);

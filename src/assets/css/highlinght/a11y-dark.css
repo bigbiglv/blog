@@ -1,7 +1,7 @@
 .a11y-dark{
   --hljs-bg: #2b2b2b;
   --hljs-color: #f8f8f2;
-
+  --hljs-selection-bg:#68686850;
   --hljs-comment-color: #d4d0ab;
   --hljs-deletion-color: #ffa07a;
   --hljs-built_in-color: #f5ab35;
@@ -26,6 +26,10 @@ code.hljs{
 */.hljs{
   background:var(--hljs-bg);
   color:var(--hljs-color);
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .hljs-comment,.hljs-quote{
   color:var(--hljs-comment-color)

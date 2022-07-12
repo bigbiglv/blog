@@ -2,7 +2,7 @@
   --hljs-bg:#1e1e22;
   --hljs-color:#dddde1;
   --hljs-selection-color:#1e1e22;
-  --hljs-selection-bg:#bf8fef;
+  --hljs-selection-bg:#68686850;
   --hljs-code-color:#888896;
   --hljs-deletion-color:#ef8f8f;
   --hljs-doctag-color:#efbf8f;
@@ -35,8 +35,9 @@ code.hljs{
   color:var(--hljs-color);
   background:var(--hljs-bg)
 }
+
 .hljs ::selection,.hljs::selection{
-  color:var(--hljs-selection-color);
+  /* color:var(--hljs-selection-color); */
   background:var(--hljs-selection-bg)
 }
 .hljs-code,.hljs-comment,.hljs-quote{

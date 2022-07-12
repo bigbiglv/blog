@@ -43,7 +43,7 @@ export default defineStore({
         }
       })
       app?.classList.remove(...classList)
-      app?.classList.add(theme)
+      if(theme) app?.classList.add(theme)
       this.appTheme = theme
       localStorage.setItem('appTheme', theme)
     },
@@ -70,7 +70,7 @@ export default defineStore({
         }
       })
       app?.classList.remove(...classList)
-      app?.classList.add(theme)
+      if(theme) app?.classList.add(theme)
       this.codeTheme = theme
       localStorage.setItem('codeTheme', theme)
     },

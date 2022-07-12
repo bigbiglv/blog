@@ -1,6 +1,7 @@
 .vs2015{
   --hljs-bg:#1e1e1e;
   --hljs-color:#dcdcdc;
+  --hljs-selection-bg:#68686850;
   --hljs-keyword-color:#569cd6;
   --hljs-link-color:#569cd6;
   --hljs-keyword-color:#569cd6;
@@ -29,6 +30,10 @@ code.hljs{
 }
 .hljs{
   background:var(--hljs-bg);color:var(--hljs-color)
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .hljs-keyword,.hljs-literal,.hljs-name,.hljs-symbol{
   color:var(--hljs-keyword-color)

@@ -64,5 +64,8 @@
   code{
     font-family: Menlo,Monaco,Consolas,Courier New,monospace;
   }
+  .hljs ::selection,.hljs::selection {
+    background: #e7e7e750 !important;
+  }
 }
 

@@ -1,6 +1,7 @@
 .atom-one-dark-reasonable{
   --hljs-color: #abb2bf;
   --hljs-bg: #282c34;
+  --hljs-selection-bg:#68686850;
   --hljs-keyword-color: #f92672;
   --hljs-function-color: #61aeee;
   --hljs-params-color: #a6e22e;
@@ -27,6 +28,10 @@ code.hljs{
 .hljs{
   color:var(--hljs-color);
   background:var(--hljs-bg)
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .hljs-keyword,.hljs-operator,.hljs-pattern-match{
   color:var(--hljs-keyword-color)

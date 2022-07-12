@@ -10,6 +10,7 @@
 .default{
   --hljs-bg:#f3f3f3;
   --hljs-color:#444;
+  --hljs-selection-bg:#68686850;
   --hljs-comment-color:#697070;
   --hljs-punctuation-color:#444a;
   --hljs-tag-color:#444;
@@ -32,6 +33,10 @@ code.hljs{
 .hljs{
   color:var(--hljs-color);
   background:var(--hljs-bg)
+}
+.hljs ::selection,.hljs::selection{
+  /* color:var(--hljs-selection-color); */
+  background:var(--hljs-selection-bg)
 }
 .hljs-comment{
   color:var(--hljs-comment-color)
