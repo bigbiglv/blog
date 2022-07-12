@@ -19,8 +19,8 @@ code.hljs{
   padding:3px 5px
 }
 .hljs{
-  background:var(--hljs-bg);
-  color:var(--hljs-color)
+  background:var(--hljs-bg) !important;
+  color:var(--hljs-color) !important
 }
 .hljs span::selection,.hljs::selection{
   background:var(--hljs-selection-bg)

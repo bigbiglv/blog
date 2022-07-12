@@ -34,8 +34,8 @@ code.hljs{
 
   Colors taken from GitHub's CSS
 */.hljs{
-  color:var(--hljs-color);
-  background:var(--hljs-bg)
+  color:var(--hljs-color) !important;
+  background:var(--hljs-bg) !important
 }
 .hljs ::selection,.hljs::selection{
   /* color:var(--hljs-selection-color); */

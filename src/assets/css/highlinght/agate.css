@@ -53,8 +53,8 @@ code.hljs{
    #fff
 */
 .hljs{
-   background:var(--hljs-bg);
-   color:var(--hljs-color)
+   background:var(--hljs-bg) !important;
+   color:var(--hljs-color) !important
 }
 .hljs ::selection,.hljs::selection{
    /* color:var(--hljs-selection-color); */
