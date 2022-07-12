@@ -19,10 +19,16 @@ export default defineStore({
     }
   },
   actions:{
-    showMobileMenu(){
-      //小屏的时候menu一直不触发显示
+    //小屏的时候打开menu
+    openMenu(){
+      //非小屏的时候menu一直不触发显示
       if(!this.mobile) return this.lgMenu = false
       this.lgMenu = true
+    },
+    closeMenu(){
+      //非小屏的时候menu一直不触发显示
+      if(!this.mobile) return this.lgMenu = false
+      this.lgMenu = false
     }
   }
 
