@@ -4,7 +4,17 @@ module.exports = {
   darkMode: 'class',
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'theme':{
+          "lighter": "var(--lighter)",
+          "light": "var(--light)",
+          "default": "var(--default)",
+          "dark": "var(--dark)",
+          "darker": "var(--darker)",
+        }
+      }
+    },
   },
   plugins: [],
 }

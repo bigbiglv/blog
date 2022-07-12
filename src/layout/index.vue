@@ -6,7 +6,7 @@ import BHeader from './BHeader.vue'
 </script>
 
 <template>
-<div class="flex justify-center bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100">
+<div class="flex justify-center bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 selection:text-blue-500 selection:bg-blue-200">
   <div class="layout h-screen overflow-hidden flex flex-col  transition">
     <BHeader />
     <div class="layout-main w-full h-full overflow-y-auto box-border flex">

@@ -1,0 +1,14 @@
+:root{
+  --lighter: #cefaf3;
+  --light: #6bd6c4;
+  --default: #377D71;
+  --dark: #235a51;
+  --darker: #122c28;
+}
+.app-pink{
+  --lighter: #fdf6f7;
+  --light: #f1e1e2;
+  --default: #F2D7D9;
+  --dark: #d1b7b9;
+  --darker: #a59395;
+}
