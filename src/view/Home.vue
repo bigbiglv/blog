@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import themeStore from '@/store/themeStore';
+import appStore from '@/store/appStore';
+console.log(appStore().lg)
 const storeTheme = themeStore()
 function test(){
   storeTheme.setAppTheme('app-pink')
