@@ -8,7 +8,7 @@ const props = defineProps({
   },
 })
 const route = useRoute()
-const routePath = route.path
+const { path:routePath, matched} = route
 const routes = toRef(props,'routes')
 const path = ref('')  //当前选中的笔记本
 
@@ -22,9 +22,9 @@ function select(item:RouteRecordRaw){
   }
 }
 //当前页面是不是笔记本列表页面 二级页面
-if(routePath.split('/').length > 2){
+if(matched.length > 1){
   for(let i = 0; i < routes.value.length; i++){
-    console.log(routes.value[i].path, '/'+routePath.split('/')[1])
+    //根据路径匹配当前选中的笔记本的列表
     if(routes.value[i].path === '/' + routePath.split('/')[1]){
       select(routes.value[i])
       break
