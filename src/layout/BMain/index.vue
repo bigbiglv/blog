@@ -15,7 +15,7 @@ const isShow = computed(()=>{
 </script>
 
 <template>
-  <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative" ref="appMain">
+  <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative px-5 no-scrollbar lg:px-0 lg:scrollbar" ref="appMain">
     <MNavBar :shrink="y > 50"/>
     <router-view>
       <template #default="{ Component, route }">

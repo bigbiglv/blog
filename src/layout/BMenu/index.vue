@@ -7,7 +7,7 @@ const routes = ref(router.options.routes)
 </script>
 
 <template>
-<div class="w-44">
+<div class="w-0 lg:w-44 transition-all transition-200">
   <MList :routes="routes"/>
 
 </div>

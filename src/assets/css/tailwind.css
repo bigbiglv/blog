@@ -71,6 +71,14 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  /* 显示滚动条 */
+  .scrollbar::-webkit-scrollbar {
+    display: block;
+  }
+  .scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: auto; /* Firefox */
+  }
   ::-webkit-scrollbar
   {
     width: 8px;
