@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors:{
+        //主题
         'theme':{
           "lighter": "var(--lighter)",
           "light": "var(--light)",
