@@ -22,7 +22,7 @@ const storeApp = appStore();
   class="bg-theme-default w-full 
          transition-200 transition-all sticky top-0 flex items-center" 
   :class="[props.shrink ? 'h-5':'h-10']"
-  @click="storeApp.showLgMenu"
+  @click="storeApp.showMobileMenu"
 >
   <h2 class="m-0 transition-200 transition-all" :class="[props.shrink ? 'text-sm':'text-xl']">
     {{title}}

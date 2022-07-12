@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import themeStore from '@/store/themeStore';
-import appStore from '@/store/appStore';
-console.log(appStore().lg)
 const storeTheme = themeStore()
-function test(){
-  storeTheme.setAppTheme('app-pink')
-}
 </script>
 
 <template>
@@ -81,8 +76,5 @@ function test(){
     <div class="w-8 h-8 bg-theme-dark "></div>
     <div class="w-8 h-8 bg-theme-darker "></div>
   </div>
-  <div @click="test">
-    pink
-  </div> 
 </div>
 </template>

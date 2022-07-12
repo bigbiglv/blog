@@ -14,14 +14,14 @@ export default defineStore({
   },
   getters:{
     //是不是小屏
-    lg:()=>{
+    mobile:()=>{
       return  sm.value || md.value || lg.value
     }
   },
   actions:{
-    showLgMenu(){
-      //小屏的时候显示menu
-      if(!this.lg) return this.lgMenu = false
+    showMobileMenu(){
+      //小屏的时候menu一直不触发显示
+      if(!this.mobile) return this.lgMenu = false
       this.lgMenu = true
     }
   }

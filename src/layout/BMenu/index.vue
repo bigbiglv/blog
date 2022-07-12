@@ -8,13 +8,13 @@ const router = useRouter()
 const routes = ref(router.options.routes)
 
 const storeApp = appStore()
-const { lgMenu, lg } = storeToRefs(storeApp)
+const { lgMenu, mobile } = storeToRefs(storeApp)
 </script>
 
 <template>
 <div 
   class="lg:w-44 transition-all transition-200 "
-  :class="[lgMenu && lg ? 'w-full h-full fixed top-0 left-0 z-100':'w-0 ']"
+  :class="[lgMenu && mobile ? 'w-full h-full fixed top-0 left-0 z-100':'w-0 ']"
   >
   <MList :routes="routes"/>
 </div>
