@@ -12,11 +12,14 @@ const { goTop } = useGoTop(appMain)
 const isShow = computed(()=>{
   return y.value > 50
 })
+const shrink = computed(()=>{
+  return y.value > 100
+})
 </script>
 
 <template>
   <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative px-5 no-scrollbar lg:px-0 lg:scrollbar" ref="appMain">
-    <MNavBar :shrink="y > 50"/>
+    <MNavBar :shrink="shrink"/>
     <router-view>
       <template #default="{ Component, route }">
         <transition name="fade-slide" mode="out-in" appear>
