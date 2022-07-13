@@ -4,6 +4,15 @@ import Home from '@/view/Home.vue'
 import docs from '@/docs'
 export const routes:Array<RouteRecordRaw> = [
   {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    meta:{
+      title: '错误页',
+      isHidden: true
+    },
+    component: () => import('@/view/NotFound.vue')
+  },
+  {
     path: '/',
     name: 'home',
     component: Layout,
