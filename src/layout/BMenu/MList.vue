@@ -50,17 +50,17 @@ function go(path:string){
 
 <template>
   <div class="w-full h-full overflow-hidden">
-    <button class="item" @click="back" v-if="page === 1">返回</button>
-    <button class="item fixed right-5 top-5" @click="storeApp.closeMenu()" v-if="lgMenu && mobile">关闭</button>
+    <button @click="back" v-if="page === 1">返回</button>
+    <button class="fixed right-5 top-5" @click="storeApp.closeMenu()" v-if="lgMenu && mobile">关闭</button>
 
-    <div class="w-full h-full relative overflow-y-auto">
+    <div class="w-full h-full relative overflow-y-auto text-sm">
       <ul class="list" :class="[page === 0 ? 'left-0' : '-left-full']">
-        <li class="item" v-for="(item,index) in routes" :key="index">
+        <li class="cursor-pointer " v-for="(item,index) in routes" :key="index">
           <span @click="select(item)" v-if="children">{{item.name}}</span>
         </li>
       </ul>
       <ul class="list" :class="[page === 1 ? 'left-0' : 'left-full']">
-        <li class="item" v-for="(item,index) in children" :key="index">
+        <li class="cursor-pointer " v-for="(item,index) in children" :key="index">
           <span @click="go(item.path)">{{item.meta?.title}}</span>
         </li>
       </ul>
@@ -71,8 +71,5 @@ function go(path:string){
 <style scoped>
 .list{
   @apply w-full list-none p-0 absolute top-0 transition-all text-center
-}
-.item{
-  @apply cursor-pointer h-10 mb-2
 }
 </style>
