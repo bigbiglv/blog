@@ -34,7 +34,7 @@ export default defineConfig({
     })
   ],
   // base: '/test-blog/',
-  base: '/',
+  base: '',
   server: {
     port: 3001,
   },
