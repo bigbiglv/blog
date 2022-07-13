@@ -26,7 +26,8 @@ export default function moduleToRoute(modules:Record<string, {[key: string]: any
           name: `${name}-${childName}`,
           component: module,
           meta: {
-            title: `${name}-${childName}`
+            // title: `${name}-${childName}`
+            title: `${childName}`
           }
         })
       }else{
@@ -45,7 +46,8 @@ export default function moduleToRoute(modules:Record<string, {[key: string]: any
               name: `${name}-${childName}`,
               component: module,
               meta: {
-                title: `${name}-${childName}`
+                // title: `${name}-${childName}`
+                title: `${childName}`
               }
             }
           ]
