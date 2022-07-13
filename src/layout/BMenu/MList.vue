@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import { RouteRecordRaw, useRoute } from "vue-router"
+import { RouteRecordRaw, useRoute, useRouter } from "vue-router"
 import { toRef, ref } from 'vue'
+import appStore from '@/store/appStore'
+import { storeToRefs } from 'pinia';
 const props = defineProps({
   routes: {
     type: Array<RouteRecordRaw>,
     required: true
   },
 })
+const storeApp = appStore()
+const { lgMenu, mobile } = storeToRefs(storeApp)
+const router = useRouter()
 const route = useRoute()
 const { path:routePath, matched} = route
 const routes = toRef(props,'routes')
@@ -37,20 +42,26 @@ function back(){
   children.value = []
   page.value = 0
 }
+function go(path:string){
+  router.push(path)
+  storeApp.closeMenu()
+}
 </script>
 
 <template>
   <div class="w-full h-full overflow-hidden">
-    <button @click="back" v-if="page === 1">返回</button>
+    <button class="item" @click="back" v-if="page === 1">返回</button>
+    <button class="item fixed right-5 top-5" @click="storeApp.closeMenu()" v-if="lgMenu && mobile">关闭</button>
+
     <div class="w-full h-full relative overflow-y-auto">
       <ul class="list" :class="[page === 0 ? 'left-0' : '-left-full']">
-        <li class="cursor-pointer" v-for="(item,index) in routes" :key="index">
+        <li class="item" v-for="(item,index) in routes" :key="index">
           <span @click="select(item)" v-if="children">{{item.name}}</span>
         </li>
       </ul>
       <ul class="list" :class="[page === 1 ? 'left-0' : 'left-full']">
-        <li class="cursor-pointer" v-for="(item,index) in children" :key="index">
-          <router-link :to="item.path">{{item.meta?.title}}</router-link>
+        <li class="item" v-for="(item,index) in children" :key="index">
+          <span @click="go(item.path)">{{item.meta?.title}}</span>
         </li>
       </ul>
     </div>
@@ -59,6 +70,9 @@ function back(){
 </template>
 <style scoped>
 .list{
-  @apply w-full list-none p-0 absolute top-0 transition-all
+  @apply w-full list-none p-0 absolute top-0 transition-all text-center
+}
+.item{
+  @apply cursor-pointer h-10 mb-2
 }
 </style>
