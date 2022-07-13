@@ -16,6 +16,10 @@ export const routes:Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: Layout,
+    meta: {
+      title: 'home',
+      isHidden: true
+    },
     children: [
       {
         path: '/',

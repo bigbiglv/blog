@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouteRecordRaw, useRoute, useRouter } from "vue-router"
-import { toRef, ref } from 'vue'
+import { toRef, ref, computed,watch } from 'vue'
 import appStore from '@/store/appStore'
 import { storeToRefs } from 'pinia';
 const props = defineProps({
@@ -13,8 +13,13 @@ const storeApp = appStore()
 const { lgMenu, mobile } = storeToRefs(storeApp)
 const router = useRouter()
 const route = useRoute()
-const { path:routePath, matched} = route
 const routes = toRef(props,'routes')
+
+const newRoutes = computed(() => {
+  return routes.value.filter(route => {
+    return !route.meta?.isHidden
+  })
+})
 const path = ref('')  //当前选中的笔记本
 
 const children = ref<RouteRecordRaw[]>([])
@@ -26,17 +31,23 @@ function select(item:RouteRecordRaw){
     page.value = 1
   }
 }
-//当前页面是不是笔记本列表页面 二级页面
-if(matched.length > 1){
+//监听当前页面是不是笔记本列表页面的二级页面 是就打开二级页面
+watch(() => route.path,(path)=>{
   for(let i = 0; i < routes.value.length; i++){
     //根据路径匹配当前选中的笔记本的列表
-    if(routes.value[i].path === '/' + routePath.split('/')[1]){
+    //首页直接返回一级菜单
+    if(path === '/'){
+      children.value = []
+      page.value = 0
+      break
+    }else if(routes.value[i].path === '/' + path.split('/')[1]){
+      //打开二级页面
       select(routes.value[i])
+      page.value = 1
       break
     }
   }
-  page.value = 1
-}
+},{immediate:true})
 function back(){
   path.value = ''
   children.value = []
@@ -55,7 +66,7 @@ function go(path:string){
 
     <div class="w-full h-full relative overflow-y-auto text-sm">
       <ul class="list" :class="[page === 0 ? 'left-0' : '-left-full']">
-        <li class="cursor-pointer " v-for="(item,index) in routes" :key="index">
+        <li class="cursor-pointer " v-for="(item,index) in newRoutes" :key="index">
           <span @click="select(item)" v-if="children">{{item.name}}</span>
         </li>
       </ul>
