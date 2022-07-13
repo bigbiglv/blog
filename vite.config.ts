@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { join } from 'path'
 import Markdown from 'vite-plugin-vue-markdown'
-
 export default defineConfig({
   plugins: [
     vue({
@@ -34,9 +33,9 @@ export default defineConfig({
     })
   ],
   // base: '/test-blog/',
-  base: '',
+  base:process.env.NODE_ENV === 'production' ? '/test-blog/' : '/',
   server: {
-    host:'0.0.0.0',
+    // host:'0.0.0.0',
     port: 3001,
   },
   resolve: {

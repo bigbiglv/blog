@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import themeStore from '@/store/themeStore';
-const storeTheme = themeStore()
 </script>
 
 <template>
-<h1 @click="storeTheme.changeDarkTheme()">
+<h1>
   我是home
 </h1>
-<p @click="storeTheme.changeDarkTheme()">切换</p>
 <div class="flex">
   <div>
     <div class="w-8 h-8 bg-red-50 "></div>
