@@ -18,7 +18,7 @@ const shrink = computed(()=>{
 </script>
 
 <template>
-  <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative px-5 no-scrollbar lg:px-0 lg:scrollbar" ref="appMain" style="scroll-padding-top:50px;">
+  <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative px-2 no-scrollbar lg:px-0 lg:scrollbar" ref="appMain" style="scroll-padding-top:50px;">
     <MNavBar :shrink="shrink"/>
     <router-view>
       <template #default="{ Component, route }">

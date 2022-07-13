@@ -34,6 +34,9 @@
   ul{
     @apply list-disc ;
   }
+  li{
+    @apply py-2
+  }
   a{
     @apply text-blue-500;
   }
@@ -50,7 +53,7 @@
     @apply bg-gray-200 dark:bg-gray-400;
   }
   code{
-    @apply text-sm leading-snug rounded-sm duration-200 px-1 py-0.5 bg-gray-100 dark:bg-gray-400;
+    @apply text-sm leading-snug rounded-sm duration-200 px-1 py-0.5 bg-gray-100 dark:bg-gray-400 my-3;
   }
 }
 
