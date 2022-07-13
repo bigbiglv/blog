@@ -7,7 +7,7 @@ const { isDark } = storeToRefs(storeTheme)
 </script>
 
 <template>
-  <div @click="storeTheme.changeDarkTheme" class="cursor-pointer select-none">
+  <div @click="storeTheme.DarkTheme(!isDark)" class="cursor-pointer select-none">
     {{isDark ? 'Dark' : 'Light'}}
   </div>
 </template>

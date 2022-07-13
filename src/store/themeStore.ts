@@ -11,7 +11,7 @@ export default defineStore({
       appThemeList:[
         'app-pink'
       ] as string[],
-      isDark:false,  //是否是暗色主题
+      isDark: localStorage.getItem('isDark') === 'true',  //是否是暗色主题
       //代码块主题
       defaultCodeTheme: localStorage.getItem('codeTheme') || 'github-dark',   //代码块主题默认为github-dark
       codeTheme: localStorage.getItem('codeTheme') || 'github-dark',   //代码块主题
@@ -29,6 +29,8 @@ export default defineStore({
       this.setAppTheme(this.defaultAppTheme)
       //代码块
       this.setCodeTheme(this.defaultCodeTheme)
+      //黑暗模式
+      this.DarkTheme(this.isDark)
     },
     //app切换主题
     setAppTheme(theme:string){
@@ -75,9 +77,10 @@ export default defineStore({
       localStorage.setItem('codeTheme', theme)
     },
     //暗色主题
-    changeDarkTheme(){      
-      this.isDark ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark')
-      this.isDark = !this.isDark
+    DarkTheme(isDark:boolean){      
+      isDark ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark')
+      this.isDark = isDark
+      localStorage.setItem('isDark', this.isDark.toString())
     },
   }
 })
