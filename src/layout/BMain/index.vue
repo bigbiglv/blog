@@ -2,8 +2,11 @@
 import GoTop from '@/components/GoTop.vue'
 import MNavBar from './MNavBar.vue'
 import useGoTop from '@/hooks/useGoTop'
+import appStore from '@/store/appStore';
 import { ref, computed, toRefs } from 'vue';
 import { useScroll } from '@vueuse/core'
+const storeApp = appStore()
+
 const appMain = ref<HTMLElement | null>(null)
 const { x, y, isScrolling, arrivedState, directions } = useScroll(appMain)
 const { left: toLeft, right: toRight, top: toTop, bottom: toBottom } = toRefs(directions)
@@ -19,7 +22,7 @@ const shrink = computed(()=>{
 
 <template>
   <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative px-2 no-scrollbar lg:px-0 lg:scrollbar" ref="appMain" style="scroll-padding-top:50px;">
-    <MNavBar :shrink="shrink"/>
+    <MNavBar :shrink="shrink" v-if="!storeApp.mobile"/>
     <router-view>
       <template #default="{ Component, route }">
         <transition name="fade-slide" mode="out-in" appear>
