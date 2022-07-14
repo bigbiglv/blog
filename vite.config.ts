@@ -33,7 +33,7 @@ export default defineConfig({
     })
   ],
   // base: '/test-blog/',
-  base:process.env.NODE_ENV === 'production' ? '/test-blog/' : '/',
+  base:process.env.NODE_ENV === 'production' ? '/' : '/',
   server: {
     // host:'0.0.0.0',
     port: 3001,
