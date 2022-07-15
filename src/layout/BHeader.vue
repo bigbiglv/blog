@@ -3,14 +3,17 @@ import SelectCodeThemeVue from '@/components/selectCodeTheme.vue'
 import CheckDark from '@/components/CheckDark.vue'
 import appStore from '@/store/appStore';
 import { storeToRefs } from 'pinia';
+import useBlogTitle from '@/hooks/useBlogTitle';
 const storeApp = appStore()
 const { mobile } = storeToRefs(storeApp)
+const { title } = useBlogTitle()
 </script>
 
 <template>
   <div class="h-20 w-full flex justify-between items-center px-5 lg:px-0 transition-200 transition-all">
     <div v-if="mobile" @click="storeApp.openMenu()">菜单</div>
     <!-- <SelectCodeThemeVue /> -->
+    <h2>{{title}}</h2>
     <CheckDark />
   </div>
 </template>

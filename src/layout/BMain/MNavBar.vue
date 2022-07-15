@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
-import { watch, ref } from 'vue';
 import appStore from '@/store/appStore';
+import useBlogTitle from '@/hooks/useBlogTitle';
+const { title } = useBlogTitle()
+
 const props = defineProps({
   shrink:{
     type: Boolean,
     default: false
   }
 })
-const route = useRoute();
-const title = ref(route.meta.title);
-watch(()=>route.meta.title,(val)=>{
-  title.value = val;
-});
 
 const storeApp = appStore();
 </script>
