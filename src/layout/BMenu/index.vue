@@ -13,8 +13,8 @@ const { lgMenu, mobile } = storeToRefs(storeApp)
 
 <template>
 <div 
-  class="lg:w-44 transition-all transition-200 bg-gray-100 dark:bg-gray-800 lg:opacity-100"
-  :class="[lgMenu && mobile ? 'w-full h-full fixed top-0 left-0 z-50  p-10 opacity-100':'w-0 opacity-0']"
+  class="lg:w-44 transition-all transition-200 rounded-lg pt-4 bg-gray-100 dark:bg-gray-800 lg:opacity-100"
+  :class="[lgMenu && mobile ? 'w-full h-full fixed top-0 left-0 z-50 p-10 opacity-100':'w-0 opacity-0']"
   >
   <MList :routes="routes"/>
 </div>
