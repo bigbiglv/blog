@@ -9,6 +9,7 @@
     "deploy": "base deploy.sh"
   },
   "dependencies": {
+    "@heroicons/vue": "^1.0.6",
     "@vueuse/core": "^8.9.0",
     "@vueuse/head": "^0.7.6",
     "highlight.js": "^11.5.1",
