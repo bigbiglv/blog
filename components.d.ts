@@ -10,6 +10,8 @@ declare module '@vue/runtime-core' {
     CheckDark: typeof import('./src/components/CheckDark.vue')['default']
     GoTop: typeof import('./src/components/GoTop.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
+    NCard: typeof import('naive-ui')['NCard']
+    NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NSwitch: typeof import('naive-ui')['NSwitch']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
