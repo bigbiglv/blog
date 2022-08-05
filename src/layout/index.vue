@@ -7,7 +7,7 @@ import BHeader from './BHeader.vue'
 
 <template>
 <div class="flex justify-center bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100">
-  <div class="w-[1000px] h-screen overflow-hidden flex flex-col">
+  <div class="w-full lg:w-[990px] 2xl:w-[1190px] h-screen flex flex-col">
     <BHeader />
     <div class="w-full h-full overflow-y-auto box-border flex ">
       <BMenu />
