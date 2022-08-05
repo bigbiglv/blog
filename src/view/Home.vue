@@ -3,27 +3,27 @@ import { ref } from 'vue';
 const blogs = ref([
   {
     name:'javascript',
-    image:'/src/assets/images/javascript.png',
+    image: new URL('/src/assets/images/javascript.png', import.meta.url).href,
   },
   {
     name:'typescript',
-    image:'/src/assets/images/typescript.png',
+    image: new URL('/src/assets/images/typescript.png', import.meta.url).href,
   },
   {
     name:'react',
-    image:'/src/assets/images/reactjs.png',
+    image: new URL('/src/assets/images/reactjs.png', import.meta.url).href,
   },
   {
     name:'vue',
-    image:'/src/assets/images/vue.png',
+    image: new URL('/src/assets/images/vue.png', import.meta.url).href,
   },
   {
     name:'nodejs',
-    image:'/src/assets/images/nodejs.webp',
+    image: new URL('/src/assets/images/nodejs.webp', import.meta.url).href,
   },
   {
     name:'git',
-    image:'/src/assets/images/git.jpg',
+    image: new URL('/src/assets/images/git.jpg', import.meta.url).href,
   },
 ])
 </script>
