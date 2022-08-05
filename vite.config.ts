@@ -2,10 +2,15 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { join } from 'path'
 import Markdown from 'vite-plugin-vue-markdown'
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 export default defineConfig({
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/], 
+    }),
+    Components({
+      resolvers: [NaiveUiResolver()]
     }),
     Markdown({
       headEnabled: true,
