@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ChevronDoubleUpIcon } from '@heroicons/vue/solid';
+
 const porps = defineProps({
   isShow:{
     type: Boolean,
@@ -13,14 +15,14 @@ function goTop(){
 
 <template>
   <div 
-    class="w-20 h-10 align-middle text-center 
-          shadow-xl fixed bottom-10 right-10 rounded-sm 
-          border-2 border-black cursor-pointer hover:animate-pulse
-          bg-white dark:bg-gray-800" 
+    class="w-14 h-14 flex items-center justify-center
+          shadow-lg fixed bottom-10 right-10 rounded-full 
+          cursor-pointer hover:animate-pulse hover:shadow-xl
+          bg-gray-50 dark:bg-gray-600" 
     @click="goTop" 
     title="蒸蒸日上"
     v-if="porps.isShow"
   >
-    TOP
+    <ChevronDoubleUpIcon class="w-6 h-6" />
   </div>
 </template>
