@@ -78,7 +78,7 @@ export default defineStore({
     },
     //暗色主题
     DarkTheme(isDark:boolean){      
-      isDark ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark')
+      isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')
       this.isDark = isDark
       localStorage.setItem('isDark', this.isDark.toString())
     },
