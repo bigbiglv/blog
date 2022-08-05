@@ -21,9 +21,10 @@ const shrink = computed(()=>{
 </script>
 
 <template>
-  <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative px-2 no-scrollbar lg:px-0 lg:scrollbar" ref="appMain" style="scroll-padding-top:50px;">
+  <div class="pb-5 flex-1 overflow-y-auto overflow-x-hidden relative px-2 no-scrollbar lg:px-0 lg:scrollbar " 
+       ref="appMain" style="scroll-padding-top:50px;">
     <MNavBar :shrink="shrink" v-if="!storeApp.mobile"/>
-    <router-view>
+    <router-view class="px-4">
       <template #default="{ Component, route }">
         <transition name="fade-slide" mode="out-in" appear>
           <component :is="Component" :key="route.fullPath"/>

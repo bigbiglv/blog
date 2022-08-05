@@ -19,12 +19,12 @@ function goHome(){
 </script>
 
 <template>
-  <div class="h-20 w-full flex justify-between items-center px-5 lg:px-0 transition-200 transition-all">
-    <div v-if="mobile" @click="storeApp.openMenu()">
+  <div class="h-20 w-full flex items-center lg:justify-between px-5 lg:px-0 transition-200 transition-all">
+    <div class="mr-2" v-if="mobile" @click="storeApp.openMenu()">
       <MenuIcon class="w-6 h-6 active:opacity-75" />
     </div>
     <!-- <SelectCodeThemeVue /> -->
-    <h2 @click="goHome">{{title}}</h2>
-    <CheckDark />
+    <h2 @click="goHome" class="text-base lg:text-xl truncate">{{title}}</h2>
+    <CheckDark v-if="!mobile"/>
   </div>
 </template>

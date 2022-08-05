@@ -17,7 +17,7 @@ const storeApp = appStore();
 <div 
   class="bg-theme-default w-full px-5 shadow-lg mb-4
          transition-200 transition-all sticky top-0 flex items-center" 
-  :class="[props.shrink ? 'h-5 rounded-sm':'h-10 rounded-md']"
+  :class="[props.shrink ? 'h-5':'h-10']"
   @click="storeApp.openMenu"
 >
   <h2 class="m-0 transition-200 transition-all" :class="[props.shrink ? 'text-sm':'text-xl']">
