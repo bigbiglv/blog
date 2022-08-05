@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { ChevronDoubleUpIcon } from '@heroicons/vue/solid';
-
-const porps = defineProps({
-  isShow:{
-    type: Boolean,
-    default: false
-  }
-})
+const { isShow = false } = defineProps<{isShow:boolean}>()
 const emits = defineEmits(['go'])
 function goTop(){
   emits('go')
@@ -21,7 +15,7 @@ function goTop(){
           bg-gray-50 dark:bg-gray-600" 
     @click="goTop" 
     title="蒸蒸日上"
-    v-if="porps.isShow"
+    v-if="isShow"
   >
     <ChevronDoubleUpIcon class="w-6 h-6" />
   </div>
