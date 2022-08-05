@@ -9,6 +9,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CheckDark: typeof import('./src/components/CheckDark.vue')['default']
     GoTop: typeof import('./src/components/GoTop.vue')['default']
+    NButton: typeof import('naive-ui')['NButton']
+    NSwitch: typeof import('naive-ui')['NSwitch']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SelectCodeTheme: typeof import('./src/components/SelectCodeTheme.vue')['default']
